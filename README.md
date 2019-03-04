@@ -1,4 +1,4 @@
-# react-laybox
+# react-laybox [![NPM package version](https://img.shields.io/npm/v/react-laybox.svg?style=flat)](https://www.npmjs.com/package/react-laybox) [![Dependency Status](https://david-dm.org/monkeydri/react-laybox.svg)](https://david-dm.org/monkeydri/react-laybox) [![devDependencies Status](https://david-dm.org/monkeydri/react-laybox/dev-status.svg)](https://david-dm.org/monkeydri/react-laybox?type=dev) [![NPM downloads](https://img.shields.io/npm/dm/react-laybox.svg?style=flat)](https://www.npmjs.com/package/react-laybox) [![HitCount](http://hits.dwyl.io/monkeydri/react-laybox.svg?style=flat)](http://hits.dwyl.io/monkeydri/react-laybox) [![Build Status](https://travis-ci.org/monkeydri/react-laybox.png?branch=master)](https://travis-ci.org/monkeydri/react-laybox}) [![Inline docs](http://inch-ci.org/github/monkeydri/react-laybox.svg?branch=master)](http://inch-ci.org/github/monkeydri/react-laybox) [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 
 Set of react components to build any layout with ease, mostly based on CSS flexbox.
 
@@ -84,6 +84,8 @@ react-laybox allows to build full scaled layout ie. content will be resized base
 
 - React
 - Prop Types
+
+# Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/monkeydri/react-laybox/issues)
 
 # Licence
 
