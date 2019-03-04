@@ -39,6 +39,12 @@ Unlike other UI frameworks which provides Grid layout like Bootstrap, Foundation
 | x  | enum 'left', 'center', 'right', 'space', 'stretch' | horizontal aligment of items inside element | 'center' |
 | y | enum 'top', 'center', 'bottom', 'space', 'stretch' | vertical aligment of items inside element | 'center' |
 
+## custom styling props
+
+| Name | Type | Description | Default Value |
+| -------------  | ---- | ----------- | ------- |
+| className | string | pass custom class to resulting div | '' |
+
 # Dependencies
 
 - React
