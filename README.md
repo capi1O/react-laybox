@@ -44,6 +44,7 @@ Unlike other UI frameworks which provides Grid layout like Bootstrap, Foundation
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
 | className | string | pass custom class to resulting div | '' |
+| style | object | pass custom style to resulting div | {} |
 
 # Dependencies
 
