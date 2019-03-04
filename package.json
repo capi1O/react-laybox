@@ -57,7 +57,7 @@
 		"type": "git",
 		"url": "https://github.com/monkeydri/react-laybox"
 	},
-	"description": "",
+	"description": "Set of react components to build any layout with ease, mostly based on CSS flexbox",
 	"bugs": {
 		"url": "https://github.com/monkeydri/react-laybox/issues"
 	},

@@ -12,12 +12,36 @@ codepen // TODO
 
 # Usage
 
+```jsx
+<div style={{ width: '100%', height: '100%' }} debug>
+	<Row x="center" y="center" style={{ height: '30%' }}>
+		<p>#1<p/>
+		<p>#2<p/>
+		<p>#3<p/>
+	<Row />
+</div>
 ```
-<Row x="center" y="center" grow>
-	<p>item veritcally centered<p/>
-	<p>I will be stacked aside each other<p/>
-<Row />
+
+```jsx
+<div style={{ width: '100%', height: '100%' }}>
+	<Row x="left" y="bottom" style={{ height: '30%' }} debug>
+		<p>#1<p/>
+		<p>#2<p/>
+		<p>#3<p/>
+	<Row />
+</div>
 ```
+
+```jsx
+<div style={{ width: '100%', height: '100%' }}>
+	<Column x="center" y="center" style={{ width: '20%' }} debug>
+		<p>#1<p/>
+		<p>#2<p/>
+		<p>#3<p/>
+	<Column />
+</div>
+```
+
 # Notes
 
 API to align inner components differs from CSS flexbox, it is based on left/right/top/bottom rather than flex-start/flex-end. It allows to get get same reference system wether using a <Column /> or a <Row /> layout.
@@ -34,7 +58,7 @@ react-laybox allows to build full scaled layout ie. content will be resized base
 
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
-| grow  | number or bool | flex-grow. 1 is grow={true}, 0 is grow={false}. | 0 |
+| grow  | number or bool | flex-grow. grow={false} => 0, grow={true} -> 1. | 0 |
 
 ## props that applies to items (children)
 
