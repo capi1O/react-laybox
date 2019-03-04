@@ -1,4 +1,4 @@
-# react-laybox [![NPM package version](https://img.shields.io/npm/v/react-laybox.svg?style=flat-square)](https://www.npmjs.com/package/react-laybox) [![Dependency Status](https://david-dm.org/monkeydri/react-laybox.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox) [![devDependencies Status](https://david-dm.org/monkeydri/react-laybox/dev-status.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox?type=dev) [![NPM downloads](https://img.shields.io/npm/dm/react-laybox.svg?style=flat-square)](https://www.npmjs.com/package/react-laybox) [![HitCount](http://hits.dwyl.io/monkeydri/react-laybox.svg)](http://hits.dwyl.io/monkeydri/react-laybox) [![Build Status](https://img.shields.io/travis/monkeydri/react-laybox.svg?style=flat-square)](https://travis-ci.org/monkeydri/react-laybox) [![codecov.io](https://img.shields.io/codecov/c/github/monkeydri/react-laybox/master.svg?style=flat-square)](http://codecov.io/github/monkeydri/react-laybox?branch=master) [![Inline docs](http://inch-ci.org/github/monkeydri/react-laybox.svg?style=flat-square&branch=master)](http://inch-ci.org/github/monkeydri/react-laybox)
+# react-laybox [![NPM package version](https://img.shields.io/npm/v/react-laybox.svg?style=flat-square)](https://www.npmjs.com/package/react-laybox) [![NPM downloads](https://img.shields.io/npm/dm/react-laybox.svg?style=flat-square)](https://www.npmjs.com/package/react-laybox) [![HitCount](http://hits.dwyl.io/monkeydri/react-laybox.svg)](http://hits.dwyl.io/monkeydri/react-laybox)  [![codecov.io](https://img.shields.io/codecov/c/github/monkeydri/react-laybox/master.svg?style=flat-square)](http://codecov.io/github/monkeydri/react-laybox?branch=master) [![Inline docs](http://inch-ci.org/github/monkeydri/react-laybox.svg?style=flat-square&branch=master)](http://inch-ci.org/github/monkeydri/react-laybox)
 
 Set of react components to build any layout with ease, combine CSS Flexbox, CSS Grid and other CSS tricks.
 
@@ -117,24 +117,32 @@ react-laybox overcomes some of the [CSS Flexbox](https://www.w3schools.com/css/c
 
 react-laybox allows to build full scaled layout ie. content will be resized based on container width. // TODO
 
-# Dependencies
+# Dependencies [![Dependency Status](https://david-dm.org/monkeydri/react-laybox.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox) 
 
-- React
-- Prop Types
+- [React v16.8](https://reactjs.org/) <img src="https://github.com/facebook/react/blob/master/fixtures/dom/public/react-logo.svg" height="48">
+- [Prop Types](https://github.com/facebook/prop-types)
 
 # Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/monkeydri/react-laybox/issues)
 
 To contribute to this project the best way is to fork it on github, clone it localy (`git clone https://github.com/your-username/react-laybox`), create a new branch (named after the purpose of the intended change), make the change (do not forget to update the README if needed !), commit, push to your repo and submit a PR on github.
 
-## build
+## build [![Build Status](https://img.shields.io/travis/monkeydri/react-laybox.svg?style=flat-square)](https://travis-ci.org/monkeydri/react-laybox)
 
-To build this project you will need [Node](https://nodejs.org/), it is recommanded to install it through [nvm](https://github.com/creationix/nvm).
+To build this project you will need [Node](https://nodejs.org/), it is recommended to install it through [nvm](https://github.com/creationix/nvm).
 
 Install required dependancies `npm install` and build `npm run build`.
 
 ## code style [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat-square)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 
-This project use specific lint rules using [eslint](https://eslint.org/) in order to get consistent code style, the main difference between classic Javascript Style such as [Airbnb style](https://github.com/airbnb/javascript) is the [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) indentation/brace style. Please use it when submitting a PR.
+This project use specific lint rules using [eslint](https://eslint.org/) in order to get consistent code style. The main difference between classic Javascript Style such as [Airbnb style](https://github.com/airbnb/javascript) is the [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) indentation/brace style. Please use it when submitting a PR.
+
+## Toolchain [![devDependencies Status](https://david-dm.org/monkeydri/react-laybox/dev-status.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox?type=dev)
+
+- [Webpack 4](https://webpack.github.io/) <img src="https://github.com/webpack/media/blob/master/logo/icon-square-small.svg" height="48">
+- [Babel 7](https://babeljs.io/) <img src="https://github.com/babel/logo/blob/master/babel.svg" height="48">
+- [Node SASS 4](https://github.com/sass/node-sass) <img src="https://github.com/sass/node-sass/blob/master/media/logo.svg" height="48"> + [Autoprefixer 9](https://github.com/postcss/autoprefixer) <img src="https://github.com/postcss/autoprefixer/blob/master/logo.svg" height="48">
+- [eslint 5](https://eslint.org/) <img src="https://github.com/eslint/eslint.github.io/blob/master/img/logo.svg" height="48"> in order to get consistent code style.
+
 
 
 # Licence [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
