@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# build
+build/
+
+# Temporary
+temp
+temp-*

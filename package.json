@@ -1,0 +1,65 @@
+{
+	"name": "react-laybox",
+	"version": "0.1.0",
+	"private": false,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack --mode development --watch",
+		"build": "webpack --mode production"
+	},
+	"dependencies": {
+		"prop-types": "^15.5.10",
+		"react": "^16.5.2"
+	},
+	"peerDependencies": {
+		"react": "^16.8.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.3.4",
+		"@babel/plugin-proposal-class-properties": "^7.3.4",
+		"@babel/plugin-transform-react-jsx": "^7.3.0",
+		"@babel/preset-env": "^7.3.4",
+		"@babel/preset-react": "^7.0.0",
+		"autoprefixer": "^9.2.0",
+		"babel-eslint": "^10.0.1",
+		"babel-loader": "^8.0.5",
+		"css-loader": "^2.1.0",
+		"eslint": "^5.13.0",
+		"eslint-config-airbnb": "^15.1.0",
+		"eslint-import-resolver-meteor": "^0.4.0",
+		"eslint-plugin-class-property": "^1.1.0",
+		"eslint-plugin-fp": "^2.3.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-jsx-a11y": "^5.1.1",
+		"eslint-plugin-meteor": "^5.1.0",
+		"eslint-plugin-react": "^7.11.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"eslint-plugin-straightforward": "0.0.1",
+		"node-sass": "^4.11.0",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.29.6",
+		"webpack-cli": "^3.2.3"
+	},
+	"author": {
+		"name": "monkeydri",
+		"email": "monkeydri@github.com"
+	},
+	"keywords": [
+		"react",
+		"layout",
+		"flexbox"
+	],
+	"main": "build/index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/monkeydri/react-laybox"
+	},
+	"description": "",
+	"bugs": {
+		"url": "https://github.com/monkeydri/react-laybox/issues"
+	},
+	"homepage": "https://github.com/monkeydri/react-laybox"
+}

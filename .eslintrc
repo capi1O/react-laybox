@@ -1,0 +1,92 @@
+{
+	"plugins":
+	[
+		"react",
+		"import",
+		"jsx-a11y",
+		"class-property",
+		"straightforward",
+		"fp"
+	],
+	"extends":
+	[
+		"eslint:recommended",
+		"airbnb",
+		"plugin:react/recommended",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:jsx-a11y/recommended"
+	],
+	"rules":
+	{
+		"straightforward/object-declaration-new-line": "error",
+		"arrow-parens": "off",
+		"import/no-unresolved": "off",
+		"no-underscore-dangle": "off",
+		"import/no-extraneous-dependencies": "off",
+		"import/prefer-default-export": "off",
+		"import/no-absolute-path": "off",
+		"import/extensions": "off",
+		"max-len": "off",
+		"indent": ["warn", "tab",
+		{
+			"VariableDeclarator": 0,
+			"CallExpression": { "arguments": 0 },
+			"SwitchCase": 1
+		}],
+		"react/jsx-indent": ["warn", "tab"],
+		"react/jsx-indent-props": ["warn", "tab"],
+		"no-tabs": "off",
+		"brace-style": ["warn", "allman", { "allowSingleLine": true }],
+		"consistent-return": "warn",
+		"comma-dangle": ["error", "never"],
+		"no-confusing-arrow": "off",
+		"no-else-return": "off",
+		"no-plusplus": "off",
+		"no-lonely-if": "off",
+		"no-unneeded-ternary": "off",
+		"no-nested-ternary": "off",
+		"no-unused-vars": "warn",
+		"quotes": "warn",
+		"no-console": "off",
+		"react/no-direct-mutation-state": "error",
+		"one-var": "off",
+		"one-var-declaration-per-line": "off",
+		"implicit-arrow-linebreak": "off",
+		"operator-linebreak": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"lines-between-class-members": "off",
+		"object-curly-newline": "off",
+		"react/jsx-wrap-multilines": "off"
+	},
+	"overrides":
+	[
+		{
+			"files": [ "package.js" ],
+			"rules":
+			{
+				"quote-props": "off"
+			}
+		}
+	],
+	"env":
+	{
+		"es6": true,
+		"jest": true,
+		"browser": true
+	},
+	"parser": "babel-eslint",
+	"parserOptions":
+	{
+		"ecmaVersion": 7,
+		"ecmaFeatures":
+		{
+			"experimentalObjectRestSpread": true,
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	"settings":
+	{
+	}
+}
