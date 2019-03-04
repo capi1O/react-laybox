@@ -137,6 +137,6 @@ Install required dependancies `npm install` and build `npm run build`.
 This project use specific lint rules using [eslint](https://eslint.org/) in order to get consistent code style, the main difference between classic Javascript Style such as [Airbnb style](https://github.com/airbnb/javascript) is the [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) indentation/brace style. Please use it when submitting a PR.
 
 
-# Licence
+# Licence [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 [MIT](LICENSE)
