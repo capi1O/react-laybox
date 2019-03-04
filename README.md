@@ -46,6 +46,12 @@ Unlike other UI frameworks which provides Grid layout like Bootstrap, Foundation
 | className | string | pass custom class to resulting div | '' |
 | style | object | pass custom style to resulting div | {} |
 
+## debug props
+
+| Name | Type | Description | Default Value |
+| -------------  | ---- | ----------- | ------- |
+| debug | bool | add border and color to div | false |
+
 # Dependencies
 
 - React

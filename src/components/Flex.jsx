@@ -3,6 +3,23 @@ import PropTypes from 'prop-types';
 
 import flex from '../styles/flex.scss';
 
+
+const debugColors =
+[
+	{ r: 255, g: 0, b: 0 }, // red
+	{ r: 0, g: 255, b: 0 }, // green
+	{ r: 0, g: 0, b: 255 }, // blue
+	{ r: 0, g: 0, b: 0 }, // black
+	{ r: 255, g: 255, b: 255 }, // white
+	{ r: 0, g: 255, b: 255 }, // cyan
+	{ r: 255, g: 255, b: 0 }, // yellow,
+	{ r: 255, g: 0, b: 255 } // purple
+];
+const randomColor = () => debugColors[Math.floor(Math.random() * debugColors.length)];
+const rgbaColor = (color, opacity) => `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity})`;
+const debugStyle = (color) => ({ border: `1px solid ${rgbaColor(color, 1)}`, backgroundColor: rgbaColor(color, 0.5) });
+
+
 const propTypes =
 {
 	// container props => apply to contained items
@@ -16,6 +33,9 @@ const propTypes =
 	className: PropTypes.string,
 	style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 
+	// debug props
+	debug: PropTypes.bool,
+
 	// react props
 	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string])
 };
@@ -27,16 +47,19 @@ const defaultProps =
 	grow: 0,
 	className: '',
 	style: {},
+	debug: false,
 	children: null
 };
 
 export const Row = (props) =>
 {
-	const { x, y, grow, className, style, children } = props;
+	const { x, y, grow, className, style, debug, children } = props;
 
 	const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
 
-	return (<div className={`${flex[`hz-x-${x}--y-${y}`]} ${flex[`grow-${growNumber} ${className}`]}`} style={style}>{children}</div>);
+	const dbgStyle = debug ? debugStyle(randomColor()) : {};
+
+	return (<div className={`${flex[`hz-x-${x}--y-${y}`]} ${flex[`grow-${growNumber} ${className}`]}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
 };
 
 Row.propTypes = propTypes;
@@ -44,11 +67,13 @@ Row.defaultProps = defaultProps;
 
 export const Column = (props) =>
 {
-	const { x, y, grow, className, style, children } = props;
+	const { x, y, grow, className, style, debug, children } = props;
 
 	const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
 
-	return (<div className={`${flex[`vt-x-${x}--y-${y}`]} ${flex[`grow-${growNumber} ${className}`]}`} style={style}>{children}</div>);
+	const dbgStyle = debug ? debugStyle(randomColor()) : {};
+
+	return (<div className={`${flex[`vt-x-${x}--y-${y}`]} ${flex[`grow-${growNumber} ${className}`]}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
 };
 
 Column.propTypes = propTypes;
