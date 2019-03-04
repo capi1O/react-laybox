@@ -19,62 +19,52 @@ const randomColor = () => debugColors[Math.floor(Math.random() * debugColors.len
 const rgbaColor = (color, opacity) => `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity})`;
 const debugStyle = (color) => ({ border: `1px solid ${rgbaColor(color, 1)}`, backgroundColor: rgbaColor(color, 0.5) });
 
-
-const propTypes =
+const FlexWrapper = (direction) =>
 {
-	// container props => apply to contained items
-	x: PropTypes.oneOf(['left', 'center', 'right', 'space', 'stretch']),
-	y: PropTypes.oneOf(['top', 'center', 'bottom', 'space', 'stretch']),
+	const Flex = (props) =>
+	{
+		const { x, y, grow, className, style, debug, children } = props;
 
-	// item props => apply to self inside parent
-	grow: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+		const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
+		const dbgStyle = debug ? debugStyle(randomColor()) : {};
 
-	// custom style props
-	className: PropTypes.string,
-	style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+		return (<div className={`${flex[`${direction}-x-${x}--y-${y}`]} ${flex[`grow-${growNumber}`]} ${className}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
+	};
 
-	// debug props
-	debug: PropTypes.bool,
+	Flex.propTypes =
+	{
+		// container props => apply to contained items
+		x: PropTypes.oneOf(['left', 'center', 'right', 'space', 'stretch']),
+		y: PropTypes.oneOf(['top', 'center', 'bottom', 'space', 'stretch']),
 
-	// react props
-	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string])
+		// item props => apply to self inside parent
+		grow: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+
+		// custom style props
+		className: PropTypes.string,
+		style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+
+		// debug props
+		debug: PropTypes.bool,
+
+		// react props
+		children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string])
+	};
+
+	Flex.defaultProps =
+	{
+		x: 'center',
+		y: 'center',
+		grow: 0,
+		className: '',
+		style: {},
+		debug: false,
+		children: null
+	};
+
+	return Flex;
 };
 
-const defaultProps =
-{
-	x: 'center',
-	y: 'center',
-	grow: 0,
-	className: '',
-	style: {},
-	debug: false,
-	children: null
-};
+export const Row = FlexWrapper('hz');
+export const Column = FlexWrapper('vt');
 
-export const Row = (props) =>
-{
-	const { x, y, grow, className, style, debug, children } = props;
-
-	const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
-
-	const dbgStyle = debug ? debugStyle(randomColor()) : {};
-
-	return (<div className={`${flex[`hz-x-${x}--y-${y}`]} ${flex[`grow-${growNumber} ${className}`]}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
-};
-
-Row.propTypes = propTypes;
-Row.defaultProps = defaultProps;
-
-export const Column = (props) =>
-{
-	const { x, y, grow, className, style, debug, children } = props;
-
-	const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
-
-	const dbgStyle = debug ? debugStyle(randomColor()) : {};
-
-	return (<div className={`${flex[`vt-x-${x}--y-${y}`]} ${flex[`grow-${growNumber} ${className}`]}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
-};
-
-Column.propTypes = propTypes;
-Column.defaultProps = defaultProps;
