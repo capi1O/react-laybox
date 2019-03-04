@@ -26,6 +26,14 @@ Unlike other UI frameworks which provides Grid layout like Bootstrap, Foundation
 
 # Props
 
+## props that applies to self (container)
+
+| Name | Type | Description | Default Value |
+| -------------  | ---- | ----------- | ------- |
+| grow  | number or bool | flex-grow. 1 is grow={true}, 0 is grow={false}. | 0 |
+
+## props that applies to items (children)
+
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
 | x  | enum 'left', 'center', 'right', 'space', 'stretch' | horizontal aligment of items inside element | 'center' |

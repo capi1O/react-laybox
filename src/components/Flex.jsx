@@ -5,9 +5,14 @@ import flex from '../styles/flex.scss';
 
 const propTypes =
 {
+	// container props => apply to contained items
 	x: PropTypes.oneOf(['left', 'center', 'right', 'space', 'stretch']),
 	y: PropTypes.oneOf(['top', 'center', 'bottom', 'space', 'stretch']),
 
+	// item props => apply to self inside parent
+	grow: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+
+	// react props
 	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string])
 };
 
@@ -15,14 +20,17 @@ const defaultProps =
 {
 	x: 'center',
 	y: 'center',
+	grow: 0,
 	children: null
 };
 
 export const Row = (props) =>
 {
-	const { x, y, children } = props;
+	const { x, y, grow, children } = props;
 
-	return (<div className={flex[`hz-x-${x}--y-${y}`]}>{children}</div>);
+	const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
+
+	return (<div className={`${flex[`hz-x-${x}--y-${y}`]} ${flex[`grow-${growNumber}`]}`}>{children}</div>);
 };
 
 Row.propTypes = propTypes;
@@ -30,9 +38,11 @@ Row.defaultProps = defaultProps;
 
 export const Column = (props) =>
 {
-	const { x, y, children } = props;
+	const { x, y, grow, children } = props;
 
-	return (<div className={flex[`vt-x-${x}--y-${y}`]}>{children}</div>);
+	const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
+
+	return (<div className={`${flex[`vt-x-${x}--y-${y}`]} ${flex[`grow-${growNumber}`]}`}>{children}</div>);
 };
 
 Column.propTypes = propTypes;
