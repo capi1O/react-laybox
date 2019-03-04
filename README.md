@@ -13,8 +13,8 @@ codepen // TODO
 # Usage
 
 ```jsx
-<div style={{ width: '100%', height: '100%' }} debug>
-	<Row x="center" y="center" style={{ height: '30%' }}>
+<div style={{ width: '100%', height: '100%' }}>
+	<Row x="center" y="center" style={{ height: '30%' }} debug>
 		<p>#1<p/>
 		<p>#2<p/>
 		<p>#3<p/>
@@ -44,9 +44,9 @@ codepen // TODO
 
 # Notes
 
-API to align inner components differs from CSS flexbox, it is based on left/right/top/bottom rather than flex-start/flex-end. It allows to get get same reference system wether using a <Column /> or a <Row /> layout.
+API to align inner components differs from CSS flexbox, it is based on left/right/top/bottom rather than flex-start/flex-end. It allows to get get same reference system wether using a `<Column />` or a `<Row />` layout.
 
-Unlike other UI frameworks which provides Grid layout like Bootstrap, Foundation or Semantic-UI you don't need to put <Columns /> in row. A <Column /> is a container which stacks its children one below the other, as such there is no reason nor need to put it inside a <Row /> and this prevents adding dummy component in your code and resulting <div>s in the DOM tree.
+Unlike other UI frameworks which provides Grid layout like Bootstrap, Foundation or Semantic-UI you don't need to put `<Column />`s in row. A `<Column />` is a container which stacks its children one below the other, as such there is no reason nor need to put it inside a `<Row />` and this prevents adding dummy component in your code and resulting `<div>`s in the DOM tree.
 
 react-laybox overcomes some of the CSS flexbox limitations such as the impossibility to set max-height of an item in row mode (or max-width in column mode). // TODO
 
