@@ -1,0 +1,63 @@
+// flexbox classes
+
+$flexX:
+(
+	left: flex-start,
+	center: center,
+	right: flex-end,
+	space: space-between,
+	stretch: stretch
+);
+
+$flexY:
+(
+	top: flex-start,
+	center: center,
+	bottom: flex-end,
+	space: space-between,
+	stretch: stretch
+);
+
+@mixin hz
+{
+	@each $flexXkey, $flexXvalue in $flexX
+	{
+		@each $flexYkey, $flexYvalue in $flexY
+		{
+			&-x-#{$flexXkey}--y-#{$flexYkey}
+			{
+				display: flex;
+				flex-direction: row;
+				justify-content: $flexXvalue;
+				align-items: $flexYvalue;
+			}
+		}
+	}
+}
+
+.hz
+{
+	@include hz;
+}
+
+@mixin vt
+{
+	@each $flexXkey, $flexXvalue in $flexX
+	{
+		@each $flexYkey, $flexYvalue in $flexY
+		{
+			&-x-#{$flexXkey}--y-#{$flexYkey}
+			{
+				display: flex;
+				flex-direction: column;
+				align-items: $flexXvalue;
+				justify-content: $flexYvalue;
+			}
+		}
+	}
+}
+
+.vt
+{
+	@include vt;
+}
