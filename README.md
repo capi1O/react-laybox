@@ -1,6 +1,6 @@
 # react-laybox [![NPM package version](https://img.shields.io/npm/v/react-laybox.svg?style=flat-square)](https://www.npmjs.com/package/react-laybox) [![NPM downloads](https://img.shields.io/npm/dm/react-laybox.svg?style=flat-square)](https://www.npmjs.com/package/react-laybox) [![HitCount](http://hits.dwyl.io/monkeydri/react-laybox.svg)](http://hits.dwyl.io/monkeydri/react-laybox)  [![codecov.io](https://img.shields.io/codecov/c/github/monkeydri/react-laybox/master.svg?style=flat-square)](http://codecov.io/github/monkeydri/react-laybox?branch=master) [![Inline docs](http://inch-ci.org/github/monkeydri/react-laybox.svg?style=flat-square&branch=master)](http://inch-ci.org/github/monkeydri/react-laybox)
 
-Set of react components to build any layout with ease, combine CSS Flexbox, CSS Grid and other CSS tricks.
+# ![react-laybox](banner.png)
 
 # Install
 
