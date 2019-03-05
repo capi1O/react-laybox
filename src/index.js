@@ -1,5 +1,5 @@
 
-import { Row as FlexRow, Column as FlexColumn } from './components/Flex';
+import { Row as FlexRow, Column as FlexColumn } from 'components/Flex';
 
 const Laybox = {};
 

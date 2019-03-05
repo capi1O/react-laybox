@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import flex from '../styles/flex.scss';
+import flex from 'styles/flex.scss';
 
 
 const debugColors =
