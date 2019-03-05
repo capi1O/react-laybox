@@ -119,7 +119,7 @@ react-laybox allows to build full scaled layout ie. content will be resized base
 
 # Dependencies [![Dependency Status](https://david-dm.org/monkeydri/react-laybox.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox) 
 
-- [React v16.8](https://reactjs.org/) <img src="https://github.com/facebook/react/blob/master/fixtures/dom/public/react-logo.svg" height="48">
+- [React v16.8](https://reactjs.org/) <img src="https://github.com/facebook/react/blob/master/fixtures/dom/public/react-logo.svg" height="24">
 - [Prop Types](https://github.com/facebook/prop-types)
 
 # Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/monkeydri/react-laybox/issues)
@@ -138,11 +138,28 @@ This project use specific lint rules using [eslint](https://eslint.org/) in orde
 
 ## Toolchain [![devDependencies Status](https://david-dm.org/monkeydri/react-laybox/dev-status.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox?type=dev)
 
-- [Webpack 4](https://webpack.github.io/) <img src="https://github.com/webpack/media/blob/master/logo/icon-square-small.svg" height="48">
-- [Babel 7](https://babeljs.io/) <img src="https://github.com/babel/logo/blob/master/babel.svg" height="48">
-- [Node SASS 4](https://github.com/sass/node-sass) <img src="https://github.com/sass/node-sass/blob/master/media/logo.svg" height="48"> + [Autoprefixer 9](https://github.com/postcss/autoprefixer) <img src="https://github.com/postcss/autoprefixer/blob/master/logo.svg" height="48">
-- [eslint 5](https://eslint.org/) <img src="https://github.com/eslint/eslint.github.io/blob/master/img/logo.svg" height="48"> in order to get consistent code style.
-
+<table align="center">
+	<tr>
+		<td align="center">Bundler</td>
+		<td align="center"><img src="https://github.com/webpack/media/blob/master/logo/icon-square-small.svg" height="24" alt="Webpack"></td>
+		<td align="center"><a href="https://webpack.github.io/">Webpack 4</a></td>
+	</tr>
+	<tr>
+		<td align="center">JS compiler</td>
+		<td align="center"><img src="https://github.com/babel/logo/blob/master/babel.svg" height="24" alt="Babel"></td>
+		<td align="center"><a href="https://babeljs.io/">Babel 7</a></td>
+	</tr>
+	<tr>
+		<td align="center">CSS preprocessor</td>
+		<td align="center"><img src="https://github.com/sass/node-sass/blob/master/media/logo.svg" height="24" alt="Node SASS"> + <img src="https://github.com/postcss/autoprefixer/blob/master/logo.svg" height="24" alt="Autoprefixer"></td>
+		<td align="center"><a href="https://github.com/sass/node-sass">Node SASS 4</a> + <a href="https://github.com/postcss/autoprefixer">Autoprefixer 9</a></td>
+	</tr>
+	<tr>
+		<td align="center">Linter</td>
+		<td align="center"><img src="https://github.com/eslint/eslint.github.io/blob/master/img/logo.svg" height="24" alt="ESlint"></td>
+		<td align="center"><a href="https://eslint.org/">ESlint 5</a></td>
+	</tr>
+</table>
 
 
 # Licence [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
