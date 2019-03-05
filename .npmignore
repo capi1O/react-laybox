@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# source
+src/
+.babelrc
+webpack.config.js
+.eslintrc
+.gitignore
+.nvmrc
+
+# env
+.env
+
+# other
+dev/

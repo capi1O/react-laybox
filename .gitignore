@@ -1,9 +1,11 @@
-# Dependency directories
+# dependencies
 node_modules/
 
 # build
 build/
 
-# Temporary
-temp
-temp-*
+# env
+.env
+
+# other
+dev/
