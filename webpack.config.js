@@ -52,7 +52,8 @@ module.exports = (env, argv) =>
 		{
 			config.output =
 			{
-				path: path.resolve(__dirname, 'demo/build')
+				path: path.resolve(__dirname, 'demo/build'),
+				filename: 'bundle.js'
 			};
 		}
 	}

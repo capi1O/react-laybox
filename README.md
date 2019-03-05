@@ -8,7 +8,8 @@ Set of react components to build any layout with ease, combine CSS Flexbox, CSS 
 
 # Demo
 
-codepen // TODO
+- [online demo](https://monkeydri.github.io/react-laybox/)
+- codepen // TODO
 
 # Usage
 
@@ -19,30 +20,30 @@ import { Row, Column } from 'react-laybox';
 ```jsx
 <div style={{ width: '100%', height: '100%' }}>
 	<Row x="center" y="center" style={{ height: '30%' }} debug>
-		<p>#1<p/>
-		<p>#2<p/>
-		<p>#3<p/>
-	<Row />
+		<p>#1</p>
+		<p>#2</p>
+		<p>#3</p>
+	</Row>
 </div>
 ```
 
 ```jsx
 <div style={{ width: '100%', height: '100%' }}>
 	<Row x="left" y="bottom" style={{ height: '30%' }} debug>
-		<p>#1<p/>
-		<p>#2<p/>
-		<p>#3<p/>
-	<Row />
+		<p>#1</p>
+		<p>#2</p>
+		<p>#3</p>
+	</Row>
 </div>
 ```
 
 ```jsx
 <div style={{ width: '100%', height: '100%' }}>
 	<Column x="center" y="center" style={{ width: '20%' }} debug>
-		<p>#1<p/>
-		<p>#2<p/>
-		<p>#3<p/>
-	<Column />
+		<p>#1</p>
+		<p>#2</p>
+		<p>#3</p>
+	</Column>
 </div>
 ```
 
@@ -143,6 +144,8 @@ To contribute to this project the best way is to fork it on github, clone it loc
 To build this project you will need [Node](https://nodejs.org/), it is recommended to install it through [nvm](https://github.com/creationix/nvm).
 
 Install required dependancies `npm install` and build `npm run build`.
+
+To run the demo
 
 ## code style [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat-square)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 
