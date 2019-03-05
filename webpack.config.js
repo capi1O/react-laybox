@@ -47,6 +47,14 @@ module.exports = (env, argv) =>
 		config.plugins = [htmlWebpackPlugin];
 
 		if (argv.mode === 'development') config.devServer = { port: 3001 };
+
+		if (argv.mode === 'production')
+		{
+			config.output =
+			{
+				path: path.resolve(__dirname, 'demo/build')
+			};
+		}
 	}
 
 	// module
