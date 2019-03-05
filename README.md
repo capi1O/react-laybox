@@ -119,8 +119,20 @@ react-laybox allows to build full scaled layout ie. content will be resized base
 
 # Dependencies [![Dependency Status](https://david-dm.org/monkeydri/react-laybox.svg?style=flat-square)](https://david-dm.org/monkeydri/react-laybox) 
 
-- [React v16.8](https://reactjs.org/) <img src="https://github.com/facebook/react/blob/master/fixtures/dom/public/react-logo.svg" height="24">
-- [Prop Types](https://github.com/facebook/prop-types)
+To use [react-laybox](https://github.com/monkeydri/react-laybox) you will need React 16.8+ and Prop Types 15.5+.
+
+<table align="center">
+	<tr>
+		<td align="center"><img src="https://github.com/facebook/react/blob/master/fixtures/dom/public/react-logo.svg" height="24" alt="React"></td>
+		<td align="center"><a href="https://reactjs.org/">React</a></td>
+		<td align="center">16.8+</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="https://github.com/facebook/react/blob/master/fixtures/dom/public/react-logo.svg" height="24" alt="Prop Types"></td>
+		<td align="center"><a href="https://github.com/facebook/prop-types">Prop Types</a></td>
+		<td align="center">15.5+</td>
+	</tr>
+</table>
 
 # Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/monkeydri/react-laybox/issues)
 

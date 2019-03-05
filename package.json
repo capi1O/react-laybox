@@ -9,10 +9,9 @@
 		"publish": "./node_modules/.bin/npm-publish-git-tag"
 	},
 	"dependencies": {
-		"prop-types": "^15.5.10",
-		"react": "^16.8.2"
 	},
 	"peerDependencies": {
+		"prop-types": "^15.5.10",
 		"react": "^16.8.2"
 	},
 	"devDependencies": {
@@ -39,6 +38,8 @@
 		"eslint-plugin-straightforward": "0.0.1",
 		"node-sass": "^4.11.0",
 		"npm-publish-git-tag": "^3.0.3",
+		"prop-types": "^15.5.10",
+		"react": "^16.8.2",
 		"sass-loader": "^7.1.0",
 		"style-loader": "^0.23.1",
 		"webpack": "^4.29.6",
