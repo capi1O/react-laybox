@@ -1,0 +1,82 @@
+
+$blue: #66CCCC;
+$blue-light: #B4E6E6;
+$blue-light-2: #BFEAE9;
+
+:global(html), :global(body), :global(#root), .demo
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+}
+
+.demo
+{
+	background: $blue;
+	color: $blue-light;
+
+	h1
+	{
+		font-size: 80px;
+		font-weight: 400;
+		margin: 0;
+		margin-bottom: -0.4em;
+		font-family: Pacifico, Arial, Helvetica, sans-serif;
+		text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+		text-transform: capitalize;
+		z-index: 1;
+	}
+
+	.content
+	{
+		.square
+		{
+			// width: 50%;
+			background-color: rgba(255, 255, 255, 0.3);
+			overflow: hidden;
+
+			.L
+			{
+				background-color: $blue-light-2;
+				box-sizing: border-box;
+				padding: 1em;
+				overflow: hidden;
+				position: relative; // so z-index is respected
+			}
+
+			.Lleft
+			{
+				@extend .L;
+
+				width: 33%;
+				height: 67%;
+				box-shadow: 8px -8px 13px rgba(0, 0, 0, 0.1);
+				z-index: 2;
+			}
+
+			.Lleft:hover
+			{
+				z-index: 0;
+			}
+
+			.Lbottom
+			{
+				@extend .L;
+
+				width: 100%;
+				height: 33%;
+				padding-left: 33%;
+				box-shadow: 0px -8px 13px rgba(0, 0, 0, 0.1);
+				z-index: 1;
+			}
+
+			.Lbottom:hover
+			{
+				z-index: 2;
+			}
+		}
+	}
+}

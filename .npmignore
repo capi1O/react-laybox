@@ -8,6 +8,7 @@ webpack.config.js
 .eslintrc
 .gitignore
 .nvmrc
+demo/
 
 # env
 .env
