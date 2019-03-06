@@ -8,7 +8,7 @@ const config =
 	resolve: {}
 };
 
-const rules = (sourceDirs) =>
+const rules = (sourceDirs, dev) =>
 	[
 		// JS + JSX loader => babel-loader
 		{
@@ -24,8 +24,8 @@ const rules = (sourceDirs) =>
 			use:
 			[
 				{ loader: 'style-loader' }, // creates style nodes from JS strings
-				{ loader: 'css-loader', options: { modules: true } }, // translates CSS into CommonJS
-				{ loader: 'sass-loader' } // compiles Sass to CSS, using Node Sass by default
+				{ loader: 'css-loader', options: { modules: true, sourceMap: dev } }, // translates CSS into CommonJS
+				{ loader: 'sass-loader', options: { sourceMap: dev } } // compiles Sass to CSS, using Node Sass by default
 			],
 			resolve: { extensions: ['.scss'] } // skip extension in imports in scss files
 		}
@@ -33,12 +33,15 @@ const rules = (sourceDirs) =>
 
 module.exports = (env, argv) =>
 {
+	const dev = argv.mode === 'development';
+	const prod = argv.mode === 'production';
+
 	// demo
 	if (env === 'demo')
 	{
 		config.entry = path.join(__dirname, 'demo/src/index.js');
 
-		config.module.rules = rules([path.resolve(__dirname, 'src'), path.resolve(__dirname, 'demo/src')]);
+		config.module.rules = rules([path.resolve(__dirname, 'src'), path.resolve(__dirname, 'demo/src')], dev);
 
 		config.resolve.modules = [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'demo/src'), 'node_modules'];
 
@@ -46,9 +49,9 @@ module.exports = (env, argv) =>
 		const htmlWebpackPlugin = new HtmlWebpackPlugin({ template: path.join(__dirname, 'demo/src', 'index.html'), filename: './index.html' });
 		config.plugins = [htmlWebpackPlugin];
 
-		if (argv.mode === 'development') config.devServer = { port: 3001 };
+		if (dev) config.devServer = { port: 3001 };
 
-		if (argv.mode === 'production')
+		else if (prod)
 		{
 			config.output =
 			{
@@ -56,6 +59,8 @@ module.exports = (env, argv) =>
 				filename: 'bundle.js'
 			};
 		}
+
+		else console.error(argv.mode !== '' ? `incorrect mode : ${argv.mode}` : 'mode unset');
 	}
 
 	// module
@@ -63,7 +68,7 @@ module.exports = (env, argv) =>
 	{
 		config.entry = path.join(__dirname, 'src/react-laybox.js');
 
-		config.module.rules = rules([path.resolve(__dirname, 'src')]);
+		config.module.rules = rules([path.resolve(__dirname, 'src')], dev);
 
 		config.resolve.modules = [path.resolve(__dirname, 'src'), 'node_modules'];
 
