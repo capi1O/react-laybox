@@ -18,13 +18,13 @@ $flexY:
 	stretch: stretch
 );
 
-@mixin hz
+@mixin lb-row
 {
 	@each $flexXkey, $flexXvalue in $flexX
 	{
 		@each $flexYkey, $flexYvalue in $flexY
 		{
-			&-x-#{$flexXkey}--y-#{$flexYkey}
+			&-x-#{$flexXkey}-y-#{$flexYkey}
 			{
 				display: flex;
 				flex-direction: row;
@@ -35,18 +35,18 @@ $flexY:
 	}
 }
 
-.hz
+.lb-row
 {
-	@include hz;
+	@include lb-row;
 }
 
-@mixin vt
+@mixin lb-col
 {
 	@each $flexXkey, $flexXvalue in $flexX
 	{
 		@each $flexYkey, $flexYvalue in $flexY
 		{
-			&-x-#{$flexXkey}--y-#{$flexYkey}
+			&-x-#{$flexXkey}-y-#{$flexYkey}
 			{
 				display: flex;
 				flex-direction: column;
@@ -57,9 +57,9 @@ $flexY:
 	}
 }
 
-.vt
+.lb-col
 {
-	@include vt;
+	@include lb-col;
 }
 
 // flex-grow classes
@@ -79,7 +79,7 @@ $growValues:
 	11: 10
 );
 
-@mixin grow
+@mixin lb-grow
 {
 	@each $growKey, $growValue in $growValues
 	{
@@ -90,7 +90,7 @@ $growValues:
 	}
 }
 
-.grow
+.lb-grow
 {
-	@include grow;
+	@include lb-grow;
 }

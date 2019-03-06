@@ -16,7 +16,7 @@ const rules = (sourceDirs) =>
 			include: sourceDirs,
 			exclude: /(node_modules|build)/,
 			use: { loader: 'babel-loader' },
-			resolve: { extensions: ['.js', '.jsx'] }
+			resolve: { extensions: ['.js', '.jsx', '.scss'] } // skip extensions in imports in js/jsx files
 		},
 		// SCSS loader => sass-loader
 		{
@@ -27,7 +27,7 @@ const rules = (sourceDirs) =>
 				{ loader: 'css-loader', options: { modules: true } }, // translates CSS into CommonJS
 				{ loader: 'sass-loader' } // compiles Sass to CSS, using Node Sass by default
 			],
-			resolve: { extensions: ['.scss'] }
+			resolve: { extensions: ['.scss'] } // skip extension in imports in scss files
 		}
 	];
 

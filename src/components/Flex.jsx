@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import flex from 'styles/flex.scss';
+import laybox from 'sass-laybox';
 
 
 const debugColors =
@@ -28,7 +28,7 @@ const FlexWrapper = (direction) =>
 		const growNumber = (typeof grow === 'boolean') ? grow ? 1 : 0 : grow;
 		const dbgStyle = debug ? debugStyle(randomColor()) : {};
 
-		return (<div className={`${flex[`${direction}-x-${x}--y-${y}`]} ${flex[`grow-${growNumber}`]} ${className}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
+		return (<div className={`${laybox[`lb-${direction}-x-${x}-y-${y}`]} ${laybox[`lb-grow-${growNumber}`]} ${className}`} style={{ ...style, ...dbgStyle }}>{children}</div>);
 	};
 
 	Flex.propTypes =
@@ -65,6 +65,5 @@ const FlexWrapper = (direction) =>
 	return Flex;
 };
 
-export const Row = FlexWrapper('hz');
-export const Column = FlexWrapper('vt');
-
+export const Row = FlexWrapper('row');
+export const Column = FlexWrapper('col');
