@@ -166,8 +166,8 @@ This project use specific lint rules using [eslint](https://eslint.org/) in orde
 	</tr>
 	<tr>
 		<td align="center">CSS preprocessor</td>
-		<td align="center"><img src="https://github.com/sass/node-sass/blob/master/media/logo.svg" height="24" alt="Node SASS"></td>
-		<td align="center"><a href="https://github.com/sass/node-sass">Node SASS 4</a></td>
+		<td align="center"><img src="https://github.com/sass/node-sass/blob/master/media/logo.svg" height="24" alt="Node SASS"> + <img src="https://github.com/postcss/autoprefixer/blob/master/logo.svg" height="24" alt="Autoprefixer"></td>
+		<td align="center"><a href="https://github.com/sass/node-sass">Node SASS 4</a> + <a href="https://github.com/postcss/autoprefixer">Autoprefixer 9</a></td>
 	</tr>
 	<tr>
 		<td align="center">Linter</td>

@@ -25,14 +25,15 @@ const rules = (sourceDirs, dev) =>
 			[
 				{ loader: 'style-loader' }, // creates style nodes from JS strings
 				{
-					loader: 'css-loader',
+					loader: 'css-loader', // translates CSS into CommonJS
 					options:
 					{
 						modules: true,
 						sourceMap: dev,
 						localIdentName: '[path][name]__[local]'
 					}
-				}, // translates CSS into CommonJS
+				},
+				{ loader: 'postcss-loader' }, // CSS plugins like autoproefixer, see postcss.config.js
 				{ loader: 'sass-loader', options: { sourceMap: dev } } // compiles Sass to CSS, using Node Sass by default
 			],
 			resolve: { extensions: ['.scss'] } // skip extension in imports in scss files

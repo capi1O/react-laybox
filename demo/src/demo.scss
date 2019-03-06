@@ -13,6 +13,12 @@ $blue-light-2: #BFEAE9;
 	overflow: hidden;
 }
 
+@mixin autoprefixer-test 
+{
+	user-select: none;
+}
+
+
 .demo
 {
 	background: $blue;
@@ -28,6 +34,8 @@ $blue-light-2: #BFEAE9;
 		text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 		text-transform: capitalize;
 		z-index: 1;
+
+		@include autoprefixer-test;
 	}
 
 	.content
