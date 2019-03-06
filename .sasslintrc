@@ -1,0 +1,29 @@
+{
+	"options":
+	{
+		"merge-default-rules": false,
+		"formatter": "stylish",
+		"max-warnings": 5000
+	},
+	"files":
+	{
+		"include": "src/**/*.s+(a|c)ss",
+		"ignore": ["node_modules/**/*.s+(a|c)ss"]
+	},
+	"rules":
+	{
+		"extends-before-mixins": 2,
+		"extends-before-declarations": 2,
+		"placeholder-in-extend": 2,
+		"mixins-before-declarations": [2, { "exclude": ["breakpoint", "mq"] }],
+		"no-warn": 1,
+		"no-debug": 1,
+		"no-ids": 2,
+		"no-important": 2,
+		"hex-notation": [2, { "style": "uppercase" }],
+		"indentation": [1, { "size": "tab" }],
+		"property-sort-order": [1, { "order": ["display","margin"],"ignore-custom-properties": true }],
+		"variable-for-property": [2, { "properties": ["margin","content"] }],
+		"brace-style": [1, { "style": "allman" }]
+	}
+}

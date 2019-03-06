@@ -171,8 +171,8 @@ This project use specific lint rules using [eslint](https://eslint.org/) in orde
 	</tr>
 	<tr>
 		<td align="center">Linter</td>
-		<td align="center"><img src="https://github.com/eslint/eslint.github.io/blob/master/img/logo.svg" height="24" alt="ESlint"></td>
-		<td align="center"><a href="https://eslint.org/">ESlint 5</a></td>
+		<td align="center"><img src="https://github.com/eslint/eslint.github.io/blob/master/img/logo.svg" height="24" alt="ESlint"> + <img src="https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png" height="24" alt="Sass Lint"></td>
+		<td align="center"><a href="https://eslint.org/">ESlint 5 </a> + <a href="https://github.com/sasstools/sass-lint">Sass-lint</a></td>
 	</tr>
 </table>
 

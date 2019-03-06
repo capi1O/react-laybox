@@ -7,11 +7,12 @@
 		"build": "webpack --mode production",
 		"start": "webpack --mode development --watch",
 		"prepublishOnly": "npm run build",
-		"publish": "./node_modules/.bin/npm-publish-git-tag",
+		"publish": "npm-publish-git-tag",
 		"start-demo": "webpack-dev-server --env demo --mode development",
 		"build-demo": "webpack --env demo --mode production",
 		"deploy-demo": "gh-pages -d demo/build",
-    "publish-demo": "npm run build-demo && npm run deploy-demo"
+		"publish-demo": "npm run build-demo && npm run deploy-demo",
+		"lint": "eslint . && sass-lint -vq"
 	},
 	"dependencies": {},
 	"peerDependencies": {
@@ -48,6 +49,7 @@
 		"react": "^16.8.2",
 		"react-container-dimensions": "^1.4.1",
 		"react-dom": "^16.8.3",
+		"sass-lint": "^1.12.1",
 		"sass-loader": "^7.1.0",
 		"style-loader": "^0.23.1",
 		"webpack": "^4.29.6",
