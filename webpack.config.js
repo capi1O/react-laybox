@@ -24,7 +24,15 @@ const rules = (sourceDirs, dev) =>
 			use:
 			[
 				{ loader: 'style-loader' }, // creates style nodes from JS strings
-				{ loader: 'css-loader', options: { modules: true, sourceMap: dev } }, // translates CSS into CommonJS
+				{
+					loader: 'css-loader',
+					options:
+					{
+						modules: true,
+						sourceMap: dev,
+						localIdentName: '[path][name]__[local]'
+					}
+				}, // translates CSS into CommonJS
 				{ loader: 'sass-loader', options: { sourceMap: dev } } // compiles Sass to CSS, using Node Sass by default
 			],
 			resolve: { extensions: ['.scss'] } // skip extension in imports in scss files
