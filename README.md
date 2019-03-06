@@ -49,7 +49,7 @@ import { Row, Column } from 'react-laybox';
 
 # Why
 
-## problem
+## Problem
 
 Despite all the awesome tools available for styling ([SASS](https://sass-lang.com/), [CSS Modules](https://github.com/css-modules/css-modules), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSS Loader](https://github.com/webpack-contrib/css-loader)...) design HTML UI is fun, however laying out those UI elements is still cumbersome.
 
@@ -62,13 +62,13 @@ To write simple UI nowadays, which fits every screen size, you have few solution
 Each of those solution work great but only for specific use cases, and does not prevent problems once you start adding real things inside your layout, for example a React Component which do not use same CSS display than your layout => overflows, unresponsive.
 As a result you will still need to get your hands dirty deep down in the CSS, and wiggle with things such as `min-height: 0` or other CSS tricks until *things look good*. This is not fun and this is a huge waste of time.
 
-## simple API
+## Simple API
 
 If, like me, you are tired of this and just want to "always keep this div at the center" + "keep footer at the bottom unless there is too much vertical content" or "put those divs side by side and keep them 50% of width or height no matter how much content is inside", then you will love [react-laybox](https://github.com/monkeydri/react-laybox).
 
 The goal of this project is to provide React components, used as containers, with an intuitive API to layout content quickly.
 
-## code readibility
+## Code readibility
 
 The second goal of this project is to make easier to understand layout from your code. Splitting CSS from your HTML does not help, and CSS media-queries make it even harder to follow.
 
@@ -78,27 +78,27 @@ React is the perfect match for [laybox](https://github.com/monkeydri/laybox) as 
 
 # Props
 
-## props that applies to self (container)
+## Props that applies to self (container)
 
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
 | grow  | number or bool | flex-grow. grow={false} => 0, grow={true} -> 1. | 0 |
 
-## props that applies to items (children)
+## Props that applies to items (children)
 
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
 | x  | enum 'left', 'center', 'right', 'space', 'stretch' | horizontal aligment of items inside element | 'center' |
 | y | enum 'top', 'center', 'bottom', 'space', 'stretch' | vertical aligment of items inside element | 'center' |
 
-## custom styling props
+## Custom styling props
 
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
 | className | string | pass custom class to resulting div | '' |
 | style | object | pass custom style to resulting div | {} |
 
-## debug props
+## Debug props
 
 | Name | Type | Description | Default Value |
 | -------------  | ---- | ----------- | ------- |
@@ -139,7 +139,7 @@ To use [react-laybox](https://github.com/monkeydri/react-laybox) you will need R
 
 To contribute to this project the best way is to fork it on github, clone it localy (`git clone https://github.com/your-username/react-laybox`), create a new branch (named after the purpose of the intended change), make the change (do not forget to update the README if needed !), commit, push to your repo and submit a PR on github.
 
-## build [![Build Status](https://img.shields.io/travis/monkeydri/react-laybox.svg?style=flat-square)](https://travis-ci.org/monkeydri/react-laybox)
+## Build [![Build Status](https://img.shields.io/travis/com/monkeydri/react-laybox.svg?style=flat-square)](https://travis-ci.com/monkeydri/react-laybox)
 
 To build this project you will need [Node](https://nodejs.org/), it is recommended to install it through [nvm](https://github.com/creationix/nvm).
 
@@ -147,7 +147,7 @@ Install required dependancies `npm install` and build `npm run build`.
 
 To run the demo
 
-## code style [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat-square)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
+## Code style [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat-square)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 
 This project use specific lint rules using [eslint](https://eslint.org/) in order to get consistent code style. The main difference between classic Javascript Style such as [Airbnb style](https://github.com/airbnb/javascript) is the [Allman](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) indentation/brace style. Please use it when submitting a PR.
 
