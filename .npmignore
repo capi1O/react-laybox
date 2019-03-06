@@ -11,6 +11,7 @@ postcss.config.js
 .gitignore
 .nvmrc
 demo/
+.travis.yml
 
 # env
 .env
