@@ -61,7 +61,7 @@ module.exports = (env, argv) =>
 	// module
 	else
 	{
-		config.entry = path.join(__dirname, 'src/index.js');
+		config.entry = path.join(__dirname, 'src/react-laybox.js');
 
 		config.module.rules = rules([path.resolve(__dirname, 'src')]);
 

@@ -5,8 +5,7 @@ import ReactDOM from 'react-dom';
 
 import ContainerDimensions from 'react-container-dimensions';
 
-import { Row, Column } from 'components/Flex';
-// import { Row, Column } from 'react-laybox';
+import { Row, Column } from 'react-laybox';
 
 import style from 'demo.scss';
 
